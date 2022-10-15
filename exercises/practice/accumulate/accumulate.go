@@ -1,5 +1,9 @@
 package accumulate
 
 func Accumulate(list []string, transform func(string) string) []string {
-	panic("Please implement the Accumulate function")
+	var result []string
+	for _, elem := range list {
+		result = append(result, transform(elem))
+	}
+	return result
 }
